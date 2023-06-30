@@ -1,0 +1,19 @@
+version: '3'
+
+
+services:
+  desafio_app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: desafio_app
+    volumes:
+      - .:/code:rw
+    ports:
+      - "5000:5000"
+    networks:
+      - desafio_app
+
+networks:
+  desafio_app:
+    driver: bridge

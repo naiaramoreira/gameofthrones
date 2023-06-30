@@ -231,4 +231,4 @@ def remover_lord(id):
 
 if __name__ == '__main__':
     database.criar_tabelas()
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000)
